@@ -213,7 +213,7 @@
        ══════════════════════════════════ */
 
     /* Task 6: API Config */
-    const GEMINI_API_KEY = 'AIzaSyA16hbVqtYJsVhqQoMWBHSBcPkHIJHy7FM';
+    const GEMINI_API_KEY = ''; // 🔑 Paste your Gemini API key here
     const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`;
 
     /* Task 10: Chat History */
@@ -366,8 +366,25 @@ Keep responses under 3 short paragraphs.`;
        DAY 64 Tasks 13–20: Auto-Generated Content
        ══════════════════════════════════ */
 
+    /* Static fallback content shown when API is unavailable */
+    const FALLBACK_ABOUT = `
+      <p>Founded in 1998, BuildPro Construction has been a cornerstone of quality and integrity in the construction industry for over 25 years. We are a team of passionate builders, designers, and project managers united by a single mission: to bring your vision to life with unmatched craftsmanship and dedication.</p>
+      <p>From stunning custom residences to large-scale commercial developments, we approach every project with the same unwavering commitment to excellence. Our deep-rooted values of integrity, transparency, and community trust have earned us the loyalty of 500+ satisfied clients across the region.</p>
+      <p>Innovation drives everything we do. We combine time-tested construction techniques with cutting-edge materials and sustainable practices — delivering spaces that stand the test of time and inspire the people who inhabit them.</p>
+    `;
+
+    const FALLBACK_SERVICES = [
+      { name: 'Residential Construction', desc: 'Custom homes built with premium materials, energy-efficient design, and meticulous attention to detail.' },
+      { name: 'Commercial Buildings',     desc: 'Modern offices, retail spaces, and industrial facilities designed for functionality and lasting impressions.' },
+      { name: 'Renovation & Remodeling', desc: 'Breathe new life into existing spaces with expert kitchen, bathroom, and full-home renovation services.' },
+      { name: 'Architectural Design',     desc: 'Collaborative blueprinting services that transform your ideas into detailed, buildable plans.' },
+      { name: 'Project Management',       desc: 'End-to-end oversight including scheduling, budgeting, and quality control for on-time delivery.' },
+      { name: 'Green & Sustainable Building', desc: 'Eco-friendly, LEED-conscious construction techniques that reduce your environmental footprint.' }
+    ];
+
     /* Task 13 & 20: Content generation with try/catch */
     async function generateContent(prompt) {
+      if (!GEMINI_API_KEY) throw new Error('No API key configured');
       const body = {
         contents: [{ role: 'user', parts: [{ text: prompt }] }],
         generationConfig: { temperature: 0.7, maxOutputTokens: 400 }
@@ -377,7 +394,10 @@ Keep responses under 3 short paragraphs.`;
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body)
       });
-      if (!res.ok) throw new Error(`API error ${res.status}`);
+      if (!res.ok) {
+        const errData = await res.json().catch(() => ({}));
+        throw new Error(errData?.error?.message || `API error ${res.status}`);
+      }
       const data = await res.json();
       return data.candidates?.[0]?.content?.parts?.[0]?.text || '';
     }
@@ -395,7 +415,8 @@ Keep responses under 3 short paragraphs.`;
         );
         el.innerHTML = `<p>${text.trim().replace(/\n/g, '</p><p>')}</p>`;
       } catch (err) {
-        el.innerHTML = `<p class="error-msg">Failed to load content. Please try again later.</p>`;
+        /* Fallback: display static content */
+        el.innerHTML = FALLBACK_ABOUT;
       }
     }
 
@@ -410,7 +431,6 @@ Keep responses under 3 short paragraphs.`;
            Example line: • Residential Construction - We build modern, comfortable homes with premium materials.
            Only output the 6 lines, nothing else.`
         );
-
         /* Task 19: Parse bullet lines → <ul><li> */
         const lines = text.split('\n').filter(l => l.trim().startsWith('•'));
         if (lines.length > 0) {
@@ -424,7 +444,11 @@ Keep responses under 3 short paragraphs.`;
           el.innerHTML = `<p style="color:rgba(255,255,255,.6); text-align:center;">${text}</p>`;
         }
       } catch (err) {
-        el.innerHTML = `<p class="error-msg">Failed to load services. Please try again later.</p>`;
+        /* Fallback: display static services list */
+        const items = FALLBACK_SERVICES.map(s =>
+          `<li><strong>${s.name}</strong> — ${s.desc}</li>`
+        ).join('');
+        el.innerHTML = `<ul>${items}</ul>`;
       }
     }
 
