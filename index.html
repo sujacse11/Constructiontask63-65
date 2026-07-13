@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Day 65 Task 2: Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BuildPro Construction — Building Your Dreams Since 1998</title>
+  <meta name="description" content="BuildPro Construction delivers premium residential, commercial, and renovation services with integrity and quality craftsmanship. Get a free quote today.">
+  <meta name="keywords" content="construction company, residential construction, commercial buildings, renovation, building contractor">
+
+  <!-- Day 65 Task 3: Canonical Tag -->
+  <link rel="canonical" href="index.html">
+
+  <!-- Task 4: CSS Link -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon (inline SVG data URI) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏗️</text></svg>">
+</head>
+<body>
+
+  <!-- ── Task 9 & 10: Navigation Header ── -->
+  <header>
+    <div class="logo" aria-label="BuildPro Construction Home">
+      Build<span>Pro</span>
+    </div>
+
+    <!-- Task 14: Hamburger (mobile) -->
+    <div class="hamburger" id="hamburger" aria-label="Toggle navigation menu" role="button" tabindex="0">
+      <span></span><span></span><span></span>
+    </div>
+
+    <!-- Task 10: Nav Links -->
+    <nav id="main-nav" role="navigation" aria-label="Main navigation">
+      <a href="index.html" class="active" aria-label="Home page">Home</a>
+      <a href="services.html" aria-label="Our Services">Services</a>
+      <a href="contact.html" aria-label="Contact Us" class="btn-nav">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- ── Task 1 (Day 65): Semantic <main> ── -->
+  <main>
+    <!-- Task 5 & Task 16: Hero Section -->
+    <section class="hero" aria-label="Hero section — Building Your Dreams">
+      <div class="hero-content">
+        <div class="hero-badge">⭐ Trusted by 500+ Clients</div>
+        <h1>Building Your <em>Dreams</em>,<br>Crafting Legacies</h1>
+        <p>
+          We deliver premium construction solutions with unmatched quality,
+          innovative design, and unwavering professionalism — from foundation to finish.
+        </p>
+        <div class="hero-actions">
+          <a href="contact.html" class="btn btn-primary" aria-label="Get a free construction quote">
+            Get a Free Quote →
+          </a>
+          <a href="services.html" class="btn btn-outline" aria-label="View our construction services">
+            Our Services
+          </a>
+        </div>
+      </div>
+      <div class="hero-scroll" aria-hidden="true">
+        <span>Scroll</span>
+        <span>↓</span>
+      </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar" aria-label="Company statistics">
+      <div class="stat-item">
+        <div class="num">25+</div>
+        <div class="label">Years Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">500+</div>
+        <div class="label">Projects Completed</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">98%</div>
+        <div class="label">Client Satisfaction</div>
+      </div>
+      <div class="stat-item">
+        <div class="num">150+</div>
+        <div class="label">Team Members</div>
+      </div>
+    </div>
+
+    <!-- Day 64 Task 12 & 13: About Us Section -->
+    <section class="section" id="about" aria-labelledby="about-heading">
+      <div class="section-header">
+        <span class="section-tag">Who We Are</span>
+        <h2 id="about-heading">About BuildPro Construction</h2>
+        <p>Integrity, quality craftsmanship, and innovation drive everything we build.</p>
+      </div>
+      <!-- Day 64 Task 12: about-us-content div -->
+      <div id="about-us-content">
+        <div class="loading-placeholder">
+          <div class="loading-dots">
+            <span></span><span></span><span></span>
+          </div>
+          Loading content…
+        </div>
+      </div>
+    </section>
+
+    <!-- Day 64 Task 12: Services preview -->
+    <section class="section" style="background: var(--dark2); padding-top: 60px; padding-bottom: 60px; margin-top: 0;" aria-labelledby="services-heading">
+      <div class="section-header">
+        <span class="section-tag" style="background: rgba(255,255,255,.08); color: rgba(255,255,255,.7);">What We Do</span>
+        <h2 id="services-heading" style="color: #fff;">Our Core Services</h2>
+        <p style="color: rgba(255,255,255,.5);">Comprehensive construction solutions tailored to your vision.</p>
+      </div>
+      <!-- Day 64 Task 12: services-content div -->
+      <div id="services-content">
+        <div class="loading-placeholder">
+          <div class="loading-dots">
+            <span></span><span></span><span></span>
+          </div>
+          Loading services…
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ── Task 11: Footer ── -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">Build<span>Pro</span></div>
+        <p>Building your dreams with integrity, precision, and quality craftsmanship since 1998.</p>
+        <div class="social-links" style="margin-top: 16px;" aria-label="Social media links">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Twitter/X">𝕏</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Instagram">ig</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="#about">About Us</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>📞 +1 (555) 123-4567</p>
+        <p>📧 info@buildpro.com</p>
+        <p>📍 123 Builder Ave, Construction City, CA 90001</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 BuildPro Construction. All rights reserved.</p>
+      <p>Privacy Policy · Terms of Service</p>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════
+       DAY 64: CHATBOT (Tasks 1–11)
+       ══════════════════════════════════ -->
+
+  <!-- Task 2: Toggle Button -->
+  <button id="chatbot-toggle" aria-label="Open construction chatbot assistant">💬</button>
+
+  <!-- Task 1: Chatbot Container -->
+  <div id="chatbot-container" role="dialog" aria-label="BuildPro AI Assistant" aria-modal="true">
+    <!-- Task 3: Header -->
+    <div class="chat-header">
+      <div class="chat-avatar">🏗️</div>
+      <div class="chat-header-info">
+        <h4>BuildPro Assistant</h4>
+        <span>AI-powered construction advisor</span>
+      </div>
+      <div class="chat-status" aria-label="Online"></div>
+    </div>
+
+    <!-- Task 3: Message Area -->
+    <div id="chat-messages" aria-live="polite" aria-label="Chat messages"></div>
+
+    <!-- Task 5: Input Area -->
+    <div class="chat-input-area">
+      <textarea
+        id="chat-input"
+        placeholder="Ask about our services…"
+        rows="1"
+        aria-label="Type your message"
+      ></textarea>
+      <button id="chat-send" aria-label="Send message">➤</button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
+       JAVASCRIPT
+       ══════════════════════════════════ -->
+  <script>
+    /* ── Task 15: Hamburger Menu Logic ── */
+    const hamburger = document.getElementById('hamburger');
+    const mainNav   = document.getElementById('main-nav');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mainNav.classList.toggle('show');
+    });
+
+    hamburger.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        hamburger.click();
+      }
+    });
+
+    /* ══════════════════════════════════
+       DAY 64: Gemini API & Chatbot
+       ══════════════════════════════════ */
+
+    /* Task 6: API Config */
+    const GEMINI_API_KEY = 'AIzaSyA16hbVqtYJsVhqQoMWBHSBcPkHIJHy7FM';
+    const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`;
+
+    /* Task 10: Chat History */
+    let chatHistory = [];
+
+    /* Task 6: Core API call function */
+    async function callGeminiAPI(prompt, systemInstruction = '') {
+      const body = {
+        contents: [
+          ...chatHistory,
+          { role: 'user', parts: [{ text: prompt }] }
+        ],
+        systemInstruction: systemInstruction
+          ? { parts: [{ text: systemInstruction }] }
+          : undefined,
+        generationConfig: {
+          temperature: 0.75,
+          maxOutputTokens: 512
+        }
+      };
+      if (!body.systemInstruction) delete body.systemInstruction;
+
+      const res = await fetch(GEMINI_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body)
+      });
+      if (!res.ok) throw new Error(`API error: ${res.status}`);
+      const data = await res.json();
+      return data.candidates?.[0]?.content?.parts?.[0]?.text || 'No response.';
+    }
+
+    /* ── Chatbot UI helpers ── */
+    const chatMessages = document.getElementById('chat-messages');
+
+    function appendMsg(text, role) {
+      const wrap = document.createElement('div');
+      wrap.className = `chat-msg ${role}`;
+
+      const avatar = document.createElement('div');
+      avatar.className = 'msg-avatar';
+      avatar.textContent = role === 'ai' ? '🏗' : 'U';
+
+      const bubble = document.createElement('div');
+      bubble.className = 'msg-bubble';
+      bubble.innerHTML = text.replace(/\n/g, '<br>');
+
+      wrap.appendChild(avatar);
+      wrap.appendChild(bubble);
+      chatMessages.appendChild(wrap);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    /* Task 8: Typing indicator */
+    function showTyping() {
+      const wrap = document.createElement('div');
+      wrap.className = 'chat-msg ai typing-indicator';
+      wrap.id = 'typing-indicator';
+
+      const avatar = document.createElement('div');
+      avatar.className = 'msg-avatar';
+      avatar.textContent = '🏗';
+
+      const bubble = document.createElement('div');
+      bubble.className = 'msg-bubble';
+      bubble.innerHTML = '<span class="dot"></span><span class="dot"></span><span class="dot"></span>';
+
+      wrap.appendChild(avatar);
+      wrap.appendChild(bubble);
+      chatMessages.appendChild(wrap);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function hideTyping() {
+      const el = document.getElementById('typing-indicator');
+      if (el) el.remove();
+    }
+
+    /* Task 7 & 9: Send Logic + AI Response */
+    const chatInput = document.getElementById('chat-input');
+    const chatSend  = document.getElementById('chat-send');
+
+    const CHAT_SYSTEM = `You are the friendly, knowledgeable AI assistant for BuildPro Construction. 
+You specialise in construction, renovation, residential and commercial building projects. 
+Answer questions concisely and professionally. Always be helpful and encourage users to contact us for detailed quotes.
+Keep responses under 3 short paragraphs.`;
+
+    async function sendChatMessage() {
+      const text = chatInput.value.trim();
+      if (!text) return;
+
+      appendMsg(text, 'user');
+      chatHistory.push({ role: 'user', parts: [{ text }] });
+      chatInput.value = '';
+      chatInput.style.height = 'auto';
+
+      showTyping();
+
+      try {
+        const reply = await callGeminiAPI(text, CHAT_SYSTEM);
+        hideTyping();
+        appendMsg(reply, 'ai');
+        chatHistory.push({ role: 'model', parts: [{ text: reply }] });
+      } catch (err) {
+        hideTyping();
+        appendMsg('Sorry, I\'m having trouble connecting. Please try again or call us at +1 (555) 123-4567.', 'ai');
+      }
+    }
+
+    chatSend.addEventListener('click', sendChatMessage);
+    chatInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        sendChatMessage();
+      }
+    });
+
+    /* Auto-resize textarea */
+    chatInput.addEventListener('input', () => {
+      chatInput.style.height = 'auto';
+      chatInput.style.height = Math.min(chatInput.scrollHeight, 100) + 'px';
+    });
+
+    /* Task 11: Initial Welcome Message */
+    function showWelcomeMessage() {
+      setTimeout(() => {
+        appendMsg('Hello! 👋 Welcome to BuildPro Construction. How can I help you with your construction project today?', 'ai');
+      }, 600);
+    }
+
+    /* Toggle chatbot (Task 2) */
+    const chatbotToggle    = document.getElementById('chatbot-toggle');
+    const chatbotContainer = document.getElementById('chatbot-container');
+    let chatOpened = false;
+
+    chatbotToggle.addEventListener('click', () => {
+      chatbotContainer.classList.toggle('open');
+      chatbotToggle.classList.toggle('active');
+      chatbotToggle.textContent = chatbotContainer.classList.contains('open') ? '✕' : '💬';
+      chatbotToggle.setAttribute('aria-label',
+        chatbotContainer.classList.contains('open') ? 'Close chatbot' : 'Open chatbot');
+
+      if (!chatOpened && chatbotContainer.classList.contains('open')) {
+        chatOpened = true;
+        showWelcomeMessage();
+      }
+    });
+
+    /* ══════════════════════════════════
+       DAY 64 Tasks 13–20: Auto-Generated Content
+       ══════════════════════════════════ */
+
+    /* Task 13 & 20: Content generation with try/catch */
+    async function generateContent(prompt) {
+      const body = {
+        contents: [{ role: 'user', parts: [{ text: prompt }] }],
+        generationConfig: { temperature: 0.7, maxOutputTokens: 400 }
+      };
+      const res = await fetch(GEMINI_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body)
+      });
+      if (!res.ok) throw new Error(`API error ${res.status}`);
+      const data = await res.json();
+      return data.candidates?.[0]?.content?.parts?.[0]?.text || '';
+    }
+
+    /* Task 14: About Us Prompt */
+    async function loadAboutUs() {
+      const el = document.getElementById('about-us-content');
+      try {
+        const text = await generateContent(
+          `Write a professional, warm "About Us" paragraph (about 120 words) for BuildPro Construction, 
+           a company founded in 1998 with 25+ years of experience. 
+           Emphasise themes of integrity, quality craftsmanship, innovation, and community trust. 
+           Mention residential and commercial expertise. 
+           Use a confident yet approachable tone. Do not use markdown. Plain text only.`
+        );
+        el.innerHTML = `<p>${text.trim().replace(/\n/g, '</p><p>')}</p>`;
+      } catch (err) {
+        el.innerHTML = `<p class="error-msg">Failed to load content. Please try again later.</p>`;
+      }
+    }
+
+    /* Task 15: Services Prompt + Task 19: Format as <ul><li> */
+    async function loadServices() {
+      const el = document.getElementById('services-content');
+      try {
+        const text = await generateContent(
+          `List exactly 6 core services of BuildPro Construction, a premium construction company.
+           Format: one service per line, start each line with a bullet "•".
+           After the bullet, write the service name in bold-style (no markdown), then a dash, then a 1-sentence description.
+           Example line: • Residential Construction - We build modern, comfortable homes with premium materials.
+           Only output the 6 lines, nothing else.`
+        );
+
+        /* Task 19: Parse bullet lines → <ul><li> */
+        const lines = text.split('\n').filter(l => l.trim().startsWith('•'));
+        if (lines.length > 0) {
+          const items = lines.map(l => {
+            const content = l.replace(/^•\s*/, '');
+            const [name, ...rest] = content.split(' - ');
+            return `<li><strong>${name.trim()}</strong> — ${rest.join(' - ').trim()}</li>`;
+          }).join('');
+          el.innerHTML = `<ul>${items}</ul>`;
+        } else {
+          el.innerHTML = `<p style="color:rgba(255,255,255,.6); text-align:center;">${text}</p>`;
+        }
+      } catch (err) {
+        el.innerHTML = `<p class="error-msg">Failed to load services. Please try again later.</p>`;
+      }
+    }
+
+    /* Task 16: DOMContentLoaded → load content */
+    document.addEventListener('DOMContentLoaded', () => {
+      loadAboutUs();
+      loadServices();
+    });
+  </script>
+
+</body>
+</html>

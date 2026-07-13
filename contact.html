@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Day 65 Task 2: Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — BuildPro Construction | Get a Free Quote</title>
+  <meta name="description" content="Contact BuildPro Construction for a free project quote. Reach out via our form, phone, or email. We respond within 24 hours.">
+  <meta name="keywords" content="contact construction company, free building quote, construction consultation">
+
+  <!-- Day 65 Task 3: Canonical Tag -->
+  <link rel="canonical" href="contact.html">
+
+  <!-- Task 4: CSS Link -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏗️</text></svg>">
+</head>
+<body>
+
+  <!-- ── Task 9 & 10: Navigation Header ── -->
+  <header>
+    <div class="logo" aria-label="BuildPro Construction Home">
+      Build<span>Pro</span>
+    </div>
+
+    <!-- Task 14: Hamburger (mobile) -->
+    <div class="hamburger" id="hamburger" aria-label="Toggle navigation menu" role="button" tabindex="0">
+      <span></span><span></span><span></span>
+    </div>
+
+    <!-- Task 10: Nav Links -->
+    <nav id="main-nav" role="navigation" aria-label="Main navigation">
+      <a href="index.html" aria-label="Home page">Home</a>
+      <a href="services.html" aria-label="Our Services">Services</a>
+      <a href="contact.html" class="active btn-nav" aria-label="Contact Us">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- Task 1 (Day 65): Semantic <main> -->
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero" aria-label="Contact page hero">
+      <span class="section-tag" style="margin-bottom: 14px;">Get In Touch</span>
+      <h1>Contact BuildPro</h1>
+      <p>Ready to start your project? We'd love to hear from you. Reach out and we'll respond within 24 hours.</p>
+    </section>
+
+    <!-- Task 7 & 65 Tasks 7-11: Contact Section -->
+    <section class="contact-section" aria-labelledby="contact-heading">
+
+      <!-- Contact Info Column -->
+      <aside class="contact-info" aria-label="Contact information">
+        <h2 id="contact-heading">Let's Build Something Great</h2>
+        <p>
+          Whether you have a full set of plans or just a great idea, we're here to help you
+          navigate every step of your construction journey.
+        </p>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon" aria-hidden="true">📞</div>
+          <div class="contact-detail-text">
+            <h4>Phone</h4>
+            <p>+1 (555) 123-4567</p>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon" aria-hidden="true">📧</div>
+          <div class="contact-detail-text">
+            <h4>Email</h4>
+            <p>info@buildpro.com</p>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon" aria-hidden="true">📍</div>
+          <div class="contact-detail-text">
+            <h4>Address</h4>
+            <p>123 Builder Ave, Construction City, CA 90001</p>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon" aria-hidden="true">🕐</div>
+          <div class="contact-detail-text">
+            <h4>Business Hours</h4>
+            <p>Mon–Fri: 8am–6pm · Sat: 9am–4pm</p>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Task 7 & 18: Contact Form -->
+      <div class="contact-form-card">
+        <h3>Send Us a Message</h3>
+
+        <!-- Day 65 Task 7: Form with id/name attributes -->
+        <form id="contact-form" novalidate aria-label="Contact form">
+
+          <div class="form-row">
+            <!-- Day 65 Task 7: Full Name field -->
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                placeholder="John Smith"
+                autocomplete="name"
+                aria-label="Your full name"
+                required
+              >
+            </div>
+
+            <!-- Day 65 Task 7: Email field -->
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="john@example.com"
+                autocomplete="email"
+                aria-label="Your email address"
+                required
+              >
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone (Optional)</label>
+            <input
+              type="text"
+              id="phone"
+              name="phone"
+              placeholder="+1 (555) 000-0000"
+              autocomplete="tel"
+              aria-label="Your phone number (optional)"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="service">Service Interested In</label>
+            <select id="service" name="service" aria-label="Select construction service" style="padding:13px 16px; border-radius:8px; border:1.5px solid var(--border); font-family:'Inter',sans-serif; font-size:.92rem; color:var(--text); background:var(--surface2); transition:var(--transition); outline:none; width:100%;">
+              <option value="">Select a service…</option>
+              <option value="residential">Residential Construction</option>
+              <option value="commercial">Commercial Buildings</option>
+              <option value="renovation">Renovation & Remodeling</option>
+              <option value="design">Architectural Design</option>
+              <option value="management">Project Management</option>
+              <option value="green">Green Building</option>
+            </select>
+          </div>
+
+          <!-- Task 7: Textarea for Message -->
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Tell us about your project…"
+              aria-label="Your message or project description"
+              required
+            ></textarea>
+          </div>
+
+          <!-- Task 19: Submit Button -->
+          <button type="submit" class="btn-submit" id="submit-btn" aria-label="Submit contact form">
+            ✉️ Send Message
+          </button>
+
+          <!-- Success / Error feedback -->
+          <div class="success-message" id="success-msg" role="alert" aria-live="polite">
+            ✅ Thank you! Your message has been sent. We'll get back to you within 24 hours.
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ── Task 11: Footer ── -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">Build<span>Pro</span></div>
+        <p>Building your dreams with integrity, precision, and quality craftsmanship since 1998.</p>
+        <div class="social-links" style="margin-top: 16px;" aria-label="Social media links">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Twitter/X">𝕏</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Instagram">ig</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>📞 +1 (555) 123-4567</p>
+        <p>📧 info@buildpro.com</p>
+        <p>📍 123 Builder Ave, Construction City, CA 90001</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 BuildPro Construction. All rights reserved.</p>
+      <p>Privacy Policy · Terms of Service</p>
+    </div>
+  </footer>
+
+  <script>
+    /* ── Task 15: Hamburger Menu Logic ── */
+    const hamburger = document.getElementById('hamburger');
+    const mainNav   = document.getElementById('main-nav');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mainNav.classList.toggle('show');
+    });
+
+    hamburger.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        hamburger.click();
+      }
+    });
+
+    /* ══════════════════════════════════
+       Day 65 Tasks 7–11: Form Autofill & LocalStorage
+       ══════════════════════════════════ */
+
+    const nameInput  = document.getElementById('fullName');
+    const emailInput = document.getElementById('email');
+    const contactForm = document.getElementById('contact-form');
+    const successMsg  = document.getElementById('success-msg');
+
+    /* Task 8: Save to localStorage */
+    function saveFormData() {
+      localStorage.setItem('buildpro_name',  nameInput.value);
+      localStorage.setItem('buildpro_email', emailInput.value);
+    }
+
+    /* Task 9: Load from localStorage on page load */
+    function loadSavedData() {
+      const savedName  = localStorage.getItem('buildpro_name');
+      const savedEmail = localStorage.getItem('buildpro_email');
+      if (savedName)  nameInput.value  = savedName;
+      if (savedEmail) emailInput.value = savedEmail;
+    }
+
+    /* Task 10: Attach input event listeners */
+    nameInput.addEventListener('input',  saveFormData);
+    emailInput.addEventListener('input', saveFormData);
+
+    /* Task 11: Form Submit — prevent reload, show success */
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Final save
+      saveFormData();
+
+      // Show success
+      successMsg.classList.add('show');
+
+      // Scroll to success
+      successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+      // Reset form fields (but keep name/email for convenience)
+      document.getElementById('message').value = '';
+      document.getElementById('phone').value   = '';
+      document.getElementById('service').value = '';
+
+      // Hide success message after 6s
+      setTimeout(() => successMsg.classList.remove('show'), 6000);
+    });
+
+    /* Load saved data on page ready */
+    document.addEventListener('DOMContentLoaded', loadSavedData);
+  </script>
+
+</body>
+</html>
